@@ -21,7 +21,7 @@ The analyses follow a structured process modeled after professional cybersecurit
 3. **Static Analysis**: Investigating the malware’s structure without execution.
 4. **Dynamic Analysis**: Executing the malware in a controlled sandbox to monitor behavior.
 5. **IOC Collection**: Compiling key indicators for detection and threat hunting.
-6. **Reporting**: Documenting findings and recommendations in a clear, actionable format.
+6. **Reporting**: Documenting findings and recommendations.
 
 ---
 
@@ -55,6 +55,7 @@ The goal of this analysis is to determine the functionality, behavior, and poten
 
  ![Screenshot 2024-12-01 at 1 59 40 PM](https://github.com/user-attachments/assets/f2060054-3a95-40bf-992c-97b55b16ce4a)
 ![Screenshot 2024-12-01 at 2 04 18 PM](https://github.com/user-attachments/assets/50cc347e-67cc-4af5-808e-5234e842dfb6)
+![Screenshot 2024-12-01 at 2 27 35 PM](https://github.com/user-attachments/assets/d2f766ca-903d-4ca8-999b-fbc32885913b)
 
 ---
 
@@ -115,7 +116,7 @@ Off the Land Binaries) and a new backdoor malware as part of their tactics
 ## 5. Recommendations
 - Block associated IOCs.
 - Deploy updated signatures to endpoint security solutions.
-
+- Restrict Admin Access on workstations.
 ## 6. References
 - VirusTotal Report: https://www.virustotal.com/gui/file/4ff54307625cf4128e1f1d2ed924326e609b3f4dd14643717c27b196abcd1ea6
 - Unpac.me: https://www.unpac.me/results/32ff6a5c-c68c-4f85-935e-825fcefabd04
