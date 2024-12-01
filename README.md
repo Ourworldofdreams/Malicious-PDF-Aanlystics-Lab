@@ -108,11 +108,14 @@ The goal of this analysis is to determine the functionality, behavior, and poten
 - TA505 has been observed using Amadey in campaigns targeting financial institutions.
 <img width="998" alt="Screenshot 2024-11-30 at 9 50 05 PM" src="https://github.com/user-attachments/assets/c4385089-b96d-419e-beab-cf8f8fec86b0">
 <img width="998" alt="Screenshot 2024-11-30 at 9 51 13 PM" src="https://github.com/user-attachments/assets/8c27fb37-ad37-472c-8906-eb736db79cb3">
+
 ## Documented Campaingns
 - TA505 utilizes Excel 4.0 macros to deliver Amadey, leveraging LOLBins (Living
 Off the Land Binaries) and a new backdoor malware as part of their tactics
+
 ![Screenshot 2024-12-01 at 2 10 21 PM](https://github.com/user-attachments/assets/b31ac831-6e69-4191-89d1-ba509cc8fe39)
 
+---
 ## 5. Recommendations
 - Block associated IOCs.
 - Deploy updated signatures to endpoint security solutions.
