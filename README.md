@@ -51,7 +51,8 @@ The goal of this analysis is to determine the functionality, behavior, and poten
   - Compressed: true
   - Entry Point: 0x4aa000
   - Signature: 17744
-  - Suspicious Imports: kernel32.dll (Core System library in Windows responsible for various low-level operations, such as: Memory management, File I/O operations,Process and thread management) Operates under the funtion name `Istrcpy` and does not resemble standard functions exported by kernel32.dll 
+  - Suspicious Imports: kernel32.dll (Core System library in Windows responsible for various low-level operations, such as: Memory management, File I/O operations,Process and thread management) Operates under the funtion name `Istrcpy` and does not resemble standard functions exported by kernel32.dll
+  - Crop
 ![Screenshot 2024-11-29 at 4 06 20 PM](https://github.com/user-attachments/assets/79f682f1-1361-4179-889f-f4dfe524eb1a)
 ---
 ### Strings
@@ -69,21 +70,25 @@ The goal of this analysis is to determine the functionality, behavior, and poten
 ![Screenshot 2024-11-29 at 5 06 32 PM](https://github.com/user-attachments/assets/b1a8da84-8434-4699-bfeb-2ac14665a4a0)
 ![Screenshot 2024-11-29 at 5 08 42 PM](https://github.com/user-attachments/assets/c8f5ffe6-fd05-4c4e-8525-be0caf1fabee)
 
-### Check for Packing/Obfuscation:
-- Analyzed with Unpac.me
-
-If packed, unpack and repeat static analysis.
 
 ---
 
 ## 4. Dynamic Analysis
 ### Behavior Observed
 - **Processes Created**: `[process.exe]`
+![Screenshot 2024-12-01 at 12 51 13 AM](https://github.com/user-attachments/assets/c33419a5-12b3-4312-b117-d45a074aabd4)
+![Screenshot 2024-12-01 at 12 51 57 AM](https://github.com/user-attachments/assets/35e500a0-49de-47db-959a-8e12ef83c2f8)
+![Screenshot 2024-12-01 at 12 52 06 AM](https://github.com/user-attachments/assets/d37d9403-1314-4a14-af01-9daded48fa95)
+
 - **File Modifications**: `[C:\Temp\malicious.dll]`
-- **Network Traffic**: `[192.168.x.x:443]`
+![Screenshot 2024-12-01 at 12 52 24 AM](https://github.com/user-attachments/assets/53a9c543-6e6c-477e-a931-d09e5c638118)
+
+- **Network Traffic**: 
 ![Screenshot 2024-11-30 at 11 19 38 PM](https://github.com/user-attachments/assets/6c95603f-6c61-4c37-96fd-4e170324833c)
+![Screenshot 2024-12-01 at 12 45 42 AM](https://github.com/user-attachments/assets/02e1ec19-e6f8-49f4-9b88-12172239b6a5)
 
 ---
+
 ### Dynamic Analysis Summery per Unpac.me 
 <img width="784" alt="Screenshot 2024-11-30 at 9 36 59 PM" src="https://github.com/user-attachments/assets/843f677f-bcfb-4740-904d-b1350abb7e6b">
 <img width="784" alt="Screenshot 2024-11-30 at 9 37 18 PM" src="https://github.com/user-attachments/assets/409fc86a-ee7e-4361-9182-af06193a5710">
