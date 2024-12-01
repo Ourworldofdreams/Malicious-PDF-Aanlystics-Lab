@@ -1,15 +1,15 @@
-# Malicious-PDF-Aanlystics-Lab
+# Malicious-Malware-Aanlystics-Lab
 
 ---
 
 # **Malware Analysis Portfolio**
 
 ## **Overview**
-Welcome to my Malware Analysis Portfolio! This repository showcases my ability to analyze and document real-world malware samples sourced from [MalwareBazaar](https://bazaar.abuse.ch/). The focus is on dissecting malicious files to understand their functionality, behavior, and potential impact, while presenting findings in a structured, professional format.
+Welcome to my Malware Analysis Portfolio! This repository showcases my ability to analyze and document real-world malware samples sourced from [MalwareBazaar](https://bazaar.abuse.ch/). 
 
 ## **What You’ll Find**
 Each analysis includes:
-- **Static Analysis**: Extracting metadata, analyzing strings, and identifying file characteristics.
+- **Static Analysis**: Extracting metadata, and identifying file characteristics.
 - **Dynamic Analysis**: Observing real-time behavior in a sandbox environment, such as process creation, file modifications, and network activity.
 - **Indicators of Compromise (IOCs)**: Hashes, domains, IPs, registry keys, and other forensic artifacts.
 - **Mitigation Recommendations**: Practical advice for detection and prevention.
