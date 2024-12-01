@@ -46,34 +46,24 @@ The goal of this analysis is to determine the functionality, behavior, and poten
 ## 3. Static Analysis
 ### Metadata
 - PE Header Information: Intel 386 or later and compatitble processors 
-  - Timestamp: 2024-09-22 17:40:44 UTC
-  - File Type: PE32 executable (GUI) Intel 80386, for MS Windows
-  - Compressed: true
-  - Entry Point: 0x4aa000
-  - Signature: 17744
-  - Suspicious Imports: kernel32.dll (Core System library in Windows responsible for various low-level operations, such as: Memory management, File I/O operations,Process and thread management) Operates under the funtion name `Istrcpy` and does not resemble standard functions exported by kernel32.dll
-  - Crop
-![Screenshot 2024-11-29 at 4 06 20 PM](https://github.com/user-attachments/assets/79f682f1-1361-4179-889f-f4dfe524eb1a)
----
-### Strings
-- **Extracted Domains**:
-![Screenshot 2024-11-29 at 4 42 48 PM](https://github.com/user-attachments/assets/c92e1125-25df-4993-ab84-87e88fc4f222)
-![Screenshot 2024-11-29 at 4 43 37 PM](https://github.com/user-attachments/assets/313d7968-39cf-4efd-824d-49c21df80dda)
----
-- **File Paths: file paths, kand registry keys**:
-![Screenshot 2024-11-29 at 4 54 04 PM](https://github.com/user-attachments/assets/20307197-755c-4f84-9442-4697e7c355d5)
-![Screenshot 2024-11-29 at 4 54 35 PM](https://github.com/user-attachments/assets/efba816b-ffd0-402d-9ad1-ae590441258d)
-![Screenshot 2024-11-29 at 5 05 36 PM](https://github.com/user-attachments/assets/d037c43c-98a0-4db1-adfa-a75cc0bd15c3)
----
-- **Commands: Command-line instructions or encoded strings.**
-  
-![Screenshot 2024-11-29 at 5 06 32 PM](https://github.com/user-attachments/assets/b1a8da84-8434-4699-bfeb-2ac14665a4a0)
-![Screenshot 2024-11-29 at 5 08 42 PM](https://github.com/user-attachments/assets/c8f5ffe6-fd05-4c4e-8525-be0caf1fabee)
+  - Timestamp: `2024-09-22 17:40:44 UTC`
+  - File Type: `PE32 executable (GUI) Intel 80386, for MS Windows`
+  - Compressed: `true`
+  - Entry Point: `0x4aa000`
+  - Signature: `17744`
+  - Suspicious Imports: `kernel32.dll` (Core System library in Windows responsible for various low-level operations, such as: Memory management, File I/O operations,Process and thread management) Operates under the funtion name `Istrcpy` and does not resemble standard functions exported by kernel32.dll
 
+ ![Screenshot 2024-12-01 at 1 59 40 PM](https://github.com/user-attachments/assets/f2060054-3a95-40bf-992c-97b55b16ce4a)
+![Screenshot 2024-12-01 at 2 04 18 PM](https://github.com/user-attachments/assets/50cc347e-67cc-4af5-808e-5234e842dfb6)
 
 ---
 
 ## 4. Dynamic Analysis
+
+![Screenshot 2024-12-01 at 1 22 38 PM](https://github.com/user-attachments/assets/876265c4-bd65-42f8-81aa-3680f54769b0)
+
+![Screenshot 2024-12-01 at 1 28 11 PM](https://github.com/user-attachments/assets/9de5377c-6dd6-4904-a27a-5d643c032b6b)
+
 ### Behavior Observed
 - **Processes Created**: `[process.exe]`
 ![Screenshot 2024-12-01 at 12 51 13 AM](https://github.com/user-attachments/assets/c33419a5-12b3-4312-b117-d45a074aabd4)
@@ -81,11 +71,15 @@ The goal of this analysis is to determine the functionality, behavior, and poten
 ![Screenshot 2024-12-01 at 12 52 06 AM](https://github.com/user-attachments/assets/d37d9403-1314-4a14-af01-9daded48fa95)
 
 - **File Modifications**: `[C:\Temp\malicious.dll]`
+![image](https://github.com/user-attachments/assets/a5fdaa0e-52dc-4643-b759-412454d0351d)
+![image](https://github.com/user-attachments/assets/783dbcc6-a9d2-4bf1-b33b-4614b518d615)
+![image](https://github.com/user-attachments/assets/8e64656b-5d76-4d73-b107-1ceccefa770c)
 ![Screenshot 2024-12-01 at 12 52 24 AM](https://github.com/user-attachments/assets/53a9c543-6e6c-477e-a931-d09e5c638118)
 
 - **Network Traffic**: 
 ![Screenshot 2024-11-30 at 11 19 38 PM](https://github.com/user-attachments/assets/6c95603f-6c61-4c37-96fd-4e170324833c)
 ![Screenshot 2024-12-01 at 12 45 42 AM](https://github.com/user-attachments/assets/02e1ec19-e6f8-49f4-9b88-12172239b6a5)
+![Screenshot 2024-12-01 at 2 12 18 PM](https://github.com/user-attachments/assets/277ef3ce-849c-4f36-a821-db0c888a01e4)
 
 ---
 
@@ -105,7 +99,7 @@ The goal of this analysis is to determine the functionality, behavior, and poten
   - Monitor global network environments
   - Detect potential malware instances
   - Identify if the same threat exists in other networks network endpoints
-  - Potential file modification in C:\Temp\malicious.dll
+  - Potential file modification C:\Users\Admin\AppData\Local\Temp\
   - Unusual process interactions
 ---
 
@@ -116,11 +110,13 @@ The goal of this analysis is to determine the functionality, behavior, and poten
 ## Documented Campaingns
 - TA505 utilizes Excel 4.0 macros to deliver Amadey, leveraging LOLBins (Living
 Off the Land Binaries) and a new backdoor malware as part of their tactics
+![Screenshot 2024-12-01 at 2 10 21 PM](https://github.com/user-attachments/assets/b31ac831-6e69-4191-89d1-ba509cc8fe39)
 
 ## 5. Recommendations
 - Block associated IOCs.
 - Deploy updated signatures to endpoint security solutions.
 
 ## 6. References
-- VirusTotal Report: `https://www.virustotal.com/gui/file/4ff54307625cf4128e1f1d2ed924326e609b3f4dd14643717c27b196abcd1ea6`
-- Unpac.me: `https://www.unpac.me/results/32ff6a5c-c68c-4f85-935e-825fcefabd04`
+- VirusTotal Report: https://www.virustotal.com/gui/file/4ff54307625cf4128e1f1d2ed924326e609b3f4dd14643717c27b196abcd1ea6
+- Unpac.me: https://www.unpac.me/results/32ff6a5c-c68c-4f85-935e-825fcefabd04
+- TRria.ge sandbox: https://tria.ge/241130-mkezqswkhp/behavioral2
