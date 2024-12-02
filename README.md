@@ -32,7 +32,7 @@ The analyses follow a structured process modeled after professional cybersecurit
 The goal of this analysis is to determine the functionality, behavior, and potential impact of the malware sample skotes.exe. The analysis will identify Indicators of Compromise (IOCs) and provide recommendations for detection and mitigation.
 
 ## 2. Sample Overview
-- **Malwere**: Amadey
+- **Malware**: Amadey
 - **Threat Type**: Downloader
 - **SHA256 hash**:	`4ff54307625cf4128e1f1d2ed924326e609b3f4dd14643717c27b196abcd1ea6`
 - **File Type**: `Executable`
